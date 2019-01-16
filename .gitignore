@@ -260,3 +260,6 @@ __pycache__/
 
 #some generated files
 node_modules/*
+
+# keys for the differents consumed services
+keys.js

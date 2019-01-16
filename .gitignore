@@ -262,4 +262,4 @@ __pycache__/
 node_modules/*
 
 # keys for the differents consumed services
-keys.js
+/keys.js

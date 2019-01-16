@@ -1,10 +1,11 @@
 const request = require('request');
+const keys = require('../../keys')
 
 const geocodeAddress = (address, callback) => {
     const encodedAddress = encodeURIComponent(address);
     
     request({
-        url: `http://www.mapquestapi.com/geocoding/v1/address?key=NYDqJxtWj4BMx89rfzfn9Vm5Tx3vtEjd&location=${encodedAddress}`,
+        url: `http://www.mapquestapi.com/geocoding/v1/address?key=${keys.ADDRESSKEY}&location=${encodedAddress}`,
         json: true
     }, (error, response, body) => {
         if(error) {

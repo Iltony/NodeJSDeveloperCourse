@@ -20,7 +20,6 @@ const geocodeAddress = (address, callback) => {
             });
         }
     });
-    
 }
 
 

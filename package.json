@@ -6,10 +6,10 @@
     "npm": "6.x"
   },
   "description": "Test app to run in heroku",
-  "main": "node-web-server/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node node-web-server/server.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",

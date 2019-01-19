@@ -1,7 +1,0 @@
-{
-  "name": "node-web-server",
-  "version": "1.0.0",
-  "scripts": {
-    "postinstall": "npm install --prefix node-web-server"
-  }
-}

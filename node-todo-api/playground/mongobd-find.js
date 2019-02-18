@@ -1,4 +1,4 @@
-const { MongoClient } = require('mongodb');
+const { MongoClient, ObjectID } = require('mongodb');
 
 MongoClient.connect('mongodb://testtodoapp:tesTtodOapp1230.6+@ds247674.mlab.com:47674/todoapp' , 
 { useNewUrlParser: true }, 
@@ -10,7 +10,7 @@ MongoClient.connect('mongodb://testtodoapp:tesTtodOapp1230.6+@ds247674.mlab.com:
 
     const db = client.db('todoapp')
     db.collection('Todos').find({
-        complete: false
+        _id: new ObjectID('5c66dd06e996b21590e3e109')
     }).toArray().then(
         (docs)=> {
             console.log('Todos');
@@ -20,5 +20,5 @@ MongoClient.connect('mongodb://testtodoapp:tesTtodOapp1230.6+@ds247674.mlab.com:
         console.log('Unable to fetch todos', err)
     })
 
-    client.close();
+    // client.close();
 });

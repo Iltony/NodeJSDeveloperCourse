@@ -1,4 +1,10 @@
-const MongoClient = require('mongodb').MongoClient;
+//const MongoClient = require('mongodb').MongoClient;
+const { MongoClient, ObjectID } = require('mongodb');
+
+var obj = new ObjectID();
+
+console.log(obj);
+
 
 MongoClient.connect('mongodb://testtodoapp:tesTtodOapp1230.6+@ds247674.mlab.com:47674/todoapp' , 
 { useNewUrlParser: true }, 
@@ -21,6 +27,7 @@ MongoClient.connect('mongodb://testtodoapp:tesTtodOapp1230.6+@ds247674.mlab.com:
     //     console.log(JSON.stringify(result.ops, undefined, 2));
     // } );
 
+    
     db.collection('Users').insertOne({
         name: 'Antonio',
         age: 35,
@@ -31,7 +38,7 @@ MongoClient.connect('mongodb://testtodoapp:tesTtodOapp1230.6+@ds247674.mlab.com:
             return console.log('Unable to insert user', err);
         }
        
-        console.log(JSON.stringify(result.ops, undefined, 2));
+        console.log(JSON.stringify(result.ops[0]._id.getTimestamp(), undefined, 2));
     } )
 
 

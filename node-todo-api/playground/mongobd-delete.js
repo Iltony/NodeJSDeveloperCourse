@@ -16,13 +16,14 @@ MongoClient.connect('mongodb://testtodoapp:tesTtodOapp1230.6+@ds247674.mlab.com:
     // });
 
     //deleteOne
-    db.collection('Todos').deleteOne({text: 'Todo to delete'}).then((result)=> {
+    // db.collection('Todos').deleteOne({text: 'Todo to delete'}).then((result)=> {
+    //     console.log(result);
+    // });
+
+    //findOneAndDelete
+    db.collection('Todos').findOneAndDelete({complete: false}).then((result)=> {
         console.log(result);
     });
-
-    //find
-
-    
 
     // client.close();
 });

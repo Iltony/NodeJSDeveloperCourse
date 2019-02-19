@@ -11,12 +11,14 @@ MongoClient.connect('mongodb://testtodoapp:tesTtodOapp1230.6+@ds247674.mlab.com:
     const db = client.db('todoapp');
 
     //deleteMany
-    db.collection('Todos').deleteMany({text: 'Todo to delete'}).then((result)=> {
-        console.log(result);
-    });
+    // db.collection('Todos').deleteMany({text: 'Todo to delete'}).then((result)=> {
+    //     console.log(result);
+    // });
 
     //deleteOne
-
+    db.collection('Todos').deleteOne({text: 'Todo to delete'}).then((result)=> {
+        console.log(result);
+    });
 
     //find
 

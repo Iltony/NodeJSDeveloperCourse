@@ -20,10 +20,10 @@ MongoClient.connect('mongodb://testtodoapp:tesTtodOapp1230.6+@ds247674.mlab.com:
     //     console.log(result);
     // });
 
-    //findOneAndDelete
-    db.collection('Todos').findOneAndDelete({complete: false}).then((result)=> {
-        console.log(result);
-    });
+    // //findOneAndDelete
+    // db.collection('Todos').findOneAndDelete({complete: false}).then((result)=> {
+    //     console.log(result);
+    // });
 
     // client.close();
 });
